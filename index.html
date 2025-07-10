@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Reda Rafat - Full-Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-blue": "#3B82F6",
+              "primary-purple": "#8B5CF6",
+              "dark-bg": "#0F172A",
+              "dark-card": "#1E293B",
+              "dark-border": "#334155",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .gradient-text {
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      }
+      .border-gradient {
+        border: 4px solid;
+        border-image: linear-gradient(135deg, #3b82f6, #8b5cf6) 1;
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+      }
+      .skill-badge {
+        transition: all 0.3s ease;
+      }
+      .skill-badge:hover {
+        transform: scale(1.05);
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      }
+      .typing-animation {
+        border-right: 2px solid #3b82f6;
+        animation: blink 1s infinite;
+      }
+      @keyframes blink {
+        0%,
+        50% {
+          border-color: transparent;
+        }
+        51%,
+        100% {
+          border-color: #3b82f6;
+        }
+      }
+      .floating {
+        animation: float 3s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-dark-bg text-white">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-dark-bg/90 backdrop-blur-md z-50 border-b border-dark-border"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="text-2xl font-bold gradient-text">MR</div>
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="hover:text-primary-blue transition-colors"
+              >Home</a
+            >
+            <a
+              href="#services"
+              class="hover:text-primary-blue transition-colors"
+              >Services</a
+            >
+            <a href="#about" class="hover:text-primary-blue transition-colors"
+              >About</a
+            >
+            <a href="#skills" class="hover:text-primary-blue transition-colors"
+              >Skills</a
+            >
+            <a
+              href="#projects"
+              class="hover:text-primary-blue transition-colors"
+              >Projects</a
+            >
+            <a href="#contact" class="hover:text-primary-blue transition-colors"
+              >Contact</a
+            >
+          </div>
+          <button class="md:hidden text-white" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center pt-16"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Left Section - Content -->
+          <div class="order-1 md:order-1 w-full">
+            <div class="text-xl text-primary-blue mb-4 font-medium">
+              Hi, it's me
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">
+              <span class="gradient-text">Mohamed Reda</span>
+            </h1>
+            <div class="text-2xl md:text-3xl text-gray-300 mb-6">
+              <span>I'm a </span>
+              <span
+                id="typed-text"
+                class="typing-animation gradient-text font-semibold"
+                >Full-Stack Developer</span
+              >
+            </div>
+            <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+              I transform your business ideas into powerful, scalable web
+              applications. Specializing in .NET technologies and modern web
+              development, I deliver high-quality solutions that drive results
+              and exceed expectations.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#services"
+                class="gradient-bg px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity text-center"
+              >
+                Explore My Services
+              </a>
+              <a
+                href="#contact"
+                class="border border-primary-blue text-primary-blue px-8 py-4 rounded-lg font-semibold hover:bg-primary-blue hover:text-white transition-colors text-center"
+              >
+                Let's Work Together
+              </a>
+            </div>
+
+            <!-- Quick Stats -->
+            <div
+              class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-dark-border"
+            >
+              <div class="text-center">
+                <div class="text-2xl font-bold gradient-text">3+</div>
+                <div class="text-sm text-gray-400">Projects Completed</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold gradient-text">100%</div>
+                <div class="text-sm text-gray-400">Client Satisfaction</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold gradient-text">24/7</div>
+                <div class="text-sm text-gray-400">Support Available</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Section - Image (hidden on small screens) -->
+          <div
+            class="hidden md:flex order-2 md:order-2 items-center justify-center"
+          >
+            <div class="floating inline-block">
+              <div
+                class="w-80 h-80 rounded-full overflow-hidden border-2 border-blue-900 shadow-2xl"
+              >
+                <img
+                  src="my-img.jpg"
+                  alt="Mohamed Reda"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-dark-card/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-4 gradient-text">
+          My Services
+        </h2>
+        <p class="text-center text-gray-400 mb-16 max-w-2xl mx-auto">
+          I provide comprehensive web development solutions that help businesses
+          grow and succeed in the digital world.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Full-Stack Development -->
+          <div
+            class="bg-dark-card p-8 rounded-lg border border-dark-border card-hover group"
+          >
+            <div class="text-4xl mb-6 gradient-text">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3
+              class="text-2xl font-semibold mb-4 group-hover:text-primary-blue transition-colors"
+            >
+              Full-Stack Development
+            </h3>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Complete web application development from database design to user
+              interface. Using .NET Core, C#, and modern frontend technologies.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Custom Web Applications
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Database Design & Implementation
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Responsive UI/UX
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Performance Optimization
+              </li>
+            </ul>
+          </div>
+
+          <!-- API Development -->
+          <div
+            class="bg-dark-card p-8 rounded-lg border border-dark-border card-hover group"
+          >
+            <div class="text-4xl mb-6 gradient-text">
+              <i class="fas fa-plug"></i>
+            </div>
+            <h3
+              class="text-2xl font-semibold mb-4 group-hover:text-primary-blue transition-colors"
+            >
+              API Development
+            </h3>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Robust RESTful APIs and web services that power your applications
+              and enable seamless integrations.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                RESTful API Design
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Third-party Integrations
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Authentication & Security
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                API Documentation
+              </li>
+            </ul>
+          </div>
+
+          <!-- E-Commerce Solutions -->
+          <div
+            class="bg-dark-card p-8 rounded-lg border border-dark-border card-hover group"
+          >
+            <div class="text-4xl mb-6 gradient-text">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3
+              class="text-2xl font-semibold mb-4 group-hover:text-primary-blue transition-colors"
+            >
+              E-Commerce Solutions
+            </h3>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Complete e-commerce platforms with payment processing, inventory
+              management, and customer management systems.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Shopping Cart Systems
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Payment Gateway Integration
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Inventory Management
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Admin Dashboards
+              </li>
+            </ul>
+          </div>
+
+          <!-- Database Solutions -->
+          <div
+            class="bg-dark-card p-8 rounded-lg border border-dark-border card-hover group"
+          >
+            <div class="text-4xl mb-6 gradient-text">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3
+              class="text-2xl font-semibold mb-4 group-hover:text-primary-blue transition-colors"
+            >
+              Database Solutions
+            </h3>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Efficient database design, optimization, and management using SQL
+              Server and Entity Framework.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Database Architecture
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Performance Tuning
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Data Migration
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Backup & Recovery
+              </li>
+            </ul>
+          </div>
+
+          <!-- Consultation & Code Review -->
+          <div
+            class="bg-dark-card p-8 rounded-lg border border-dark-border card-hover group"
+          >
+            <div class="text-4xl mb-6 gradient-text">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3
+              class="text-2xl font-semibold mb-4 group-hover:text-primary-blue transition-colors"
+            >
+              Code Review & Consultation
+            </h3>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Expert code review, architecture consultation, and technical
+              guidance to improve your existing projects.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Code Quality Assessment
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Architecture Review
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Performance Analysis
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Best Practices Implementation
+              </li>
+            </ul>
+          </div>
+
+          <!-- Maintenance & Support -->
+          <div
+            class="bg-dark-card p-8 rounded-lg border border-dark-border card-hover group"
+          >
+            <div class="text-4xl mb-6 gradient-text">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3
+              class="text-2xl font-semibold mb-4 group-hover:text-primary-blue transition-colors"
+            >
+              Maintenance & Support
+            </h3>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Ongoing maintenance, bug fixes, feature updates, and technical
+              support for your web applications.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Bug Fixes & Updates
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Security Updates
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                Feature Enhancements
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-primary-blue"></i>
+                24/7 Technical Support
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center mt-16">
+          <h3 class="text-2xl font-semibold mb-4">
+            Ready to Start Your Project?
+          </h3>
+          <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+            Let's discuss your requirements and create a solution that perfectly
+            fits your business needs.
+          </p>
+          <a
+            href="#contact"
+            class="gradient-bg px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity inline-block"
+          >
+            Contact With Me
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="py-20 bg-dark-card/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-16 gradient-text">
+          About Me
+        </h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-semibold mb-6 text-primary-blue">
+              Background
+            </h3>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              I'm a business-oriented Full-Stack Web Developer with an
+              engineering mindset and structured approach to software
+              development. Currently enhancing my expertise through an intensive
+              Full-Stack Web Development program at ITI.
+            </p>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              With a solid foundation in C# .NET, JavaScript, and SQL, I
+              specialize in designing scalable, maintainable applications that
+              transform business requirements into robust technical solutions.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <div class="flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-primary-purple"></i>
+                <span>Zagazig, Egypt</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-graduation-cap text-primary-purple"></i>
+                <span>Economics Major, ZU</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-code text-primary-purple"></i>
+                <span>Full-Stack Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="bg-dark-card p-6 rounded-lg border border-dark-border">
+              <h4 class="text-xl font-semibold mb-2 text-primary-blue">
+                Current Focus
+              </h4>
+              <p class="text-gray-300">
+                Helping Startups to build Software Solutions from an idea to
+                market-Competing software-based Service.
+              </p>
+              <span class="text-sm text-primary-purple"
+                >Feb 2024 - Present</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-16 gradient-text">
+          Technical Skills
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Backend -->
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="text-3xl mb-4 text-primary-blue">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Backend Development</h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >C#</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >.NET Core</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >ASP.NET MVC</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Web API</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >EF Core</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >ADO.NET</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >LINQ</span
+              >
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="text-3xl mb-4 text-primary-purple">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Frontend Development</h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >JavaScript</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Angular</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >HTML5</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >CSS3</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Bootstrap</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Responsive Design</span
+              >
+            </div>
+          </div>
+
+          <!-- Database & Tools -->
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="text-3xl mb-4 text-primary-blue">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Database & Tools</h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >SQL Server</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Git</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >GitHub</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Visual Studio</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Postman</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >RESTful APIs</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Development Principles -->
+        <div
+          class="mt-12 bg-dark-card p-8 rounded-lg border border-dark-border"
+        >
+          <h3 class="text-2xl font-semibold mb-6 text-center gradient-text">
+            Development Principles
+          </h3>
+          <div class="grid md:grid-cols-4 gap-4">
+            <div class="text-center">
+              <div class="text-2xl mb-2 text-primary-blue">
+                <i class="fas fa-cube"></i>
+              </div>
+              <span class="text-sm">OOP & OOD</span>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl mb-2 text-primary-purple">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <span class="text-sm">SOLID Principles</span>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl mb-2 text-primary-blue">
+                <i class="fas fa-puzzle-piece"></i>
+              </div>
+              <span class="text-sm">Design Patterns</span>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl mb-2 text-primary-purple">
+                <i class="fas fa-code"></i>
+              </div>
+              <span class="text-sm">Clean Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-dark-card/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-16 gradient-text">
+          Featured Projects
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- E-Commerce Project -->
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="text-3xl mb-4 text-primary-blue">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">E-Commerce Platform</h3>
+            <p class="text-gray-300 mb-4">
+              Full-featured e-commerce platform with 3-tier architecture,
+              authentication, role-based access, and complete order management.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="bg-primary-blue/20 text-primary-blue px-2 py-1 rounded text-xs"
+                >JavaScript</span
+              >
+              <span
+                class="bg-primary-purple/20 text-primary-purple px-2 py-1 rounded text-xs"
+                >3-Tier Architecture</span
+              >
+              <span
+                class="bg-primary-blue/20 text-primary-blue px-2 py-1 rounded text-xs"
+                >Authentication</span
+              >
+            </div>
+            <a
+              href="#"
+              class="text-primary-blue hover:text-primary-purple transition-colors"
+            >
+              <i class="fab fa-github mr-2"></i>View on GitHub
+            </a>
+          </div>
+
+          <!-- Book Management System -->
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="text-3xl mb-4 text-primary-purple">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Book Management System</h3>
+            <p class="text-gray-300 mb-4">
+              Desktop application for managing books, borrowing, and fines using
+              Windows Forms and ADO.NET.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="bg-primary-blue/20 text-primary-blue px-2 py-1 rounded text-xs"
+                >C#</span
+              >
+              <span
+                class="bg-primary-purple/20 text-primary-purple px-2 py-1 rounded text-xs"
+                >Windows Forms</span
+              >
+              <span
+                class="bg-primary-blue/20 text-primary-blue px-2 py-1 rounded text-xs"
+                >ADO.NET</span
+              >
+            </div>
+            <a
+              href="#"
+              class="text-primary-blue hover:text-primary-purple transition-colors"
+            >
+              <i class="fab fa-github mr-2"></i>View on GitHub
+            </a>
+          </div>
+
+          <!-- Examination System -->
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="text-3xl mb-4 text-primary-blue">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Examination System</h3>
+            <p class="text-gray-300 mb-4">
+              Comprehensive exam management system with question banks, timed
+              exams, automatic grading, and result generation.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="bg-primary-blue/20 text-primary-blue px-2 py-1 rounded text-xs"
+                >C#</span
+              >
+              <span
+                class="bg-primary-purple/20 text-primary-purple px-2 py-1 rounded text-xs"
+                >Desktop App</span
+              >
+              <span
+                class="bg-primary-blue/20 text-primary-blue px-2 py-1 rounded text-xs"
+                >Database</span
+              >
+            </div>
+            <a
+              href="#"
+              class="text-primary-blue hover:text-primary-purple transition-colors"
+            >
+              <i class="fab fa-github mr-2"></i>View on GitHub
+            </a>
+          </div>
+
+          <!-- Cafeteria Management -->
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="text-3xl mb-4 text-primary-purple">
+              <i class="fas fa-coffee"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Cafeteria Management</h3>
+            <p class="text-gray-300 mb-4">
+              Windows Forms application handling menu management, order
+              placement, inventory updates, and sales tracking.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="bg-primary-blue/20 text-primary-blue px-2 py-1 rounded text-xs"
+                >C#</span
+              >
+              <span
+                class="bg-primary-purple/20 text-primary-purple px-2 py-1 rounded text-xs"
+                >Windows Forms</span
+              >
+              <span
+                class="bg-primary-blue/20 text-primary-blue px-2 py-1 rounded text-xs"
+                >ADO.NET</span
+              >
+            </div>
+            <a
+              href="#"
+              class="text-primary-blue hover:text-primary-purple transition-colors"
+            >
+              <i class="fab fa-github mr-2"></i>View on GitHub
+            </a>
+          </div>
+
+          <!-- Banking System -->
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="text-3xl mb-4 text-primary-blue">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Banking System</h3>
+            <p class="text-gray-300 mb-4">
+              C++ command-line application simulating core banking operations
+              including account management and transactions.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="bg-primary-blue/20 text-primary-blue px-2 py-1 rounded text-xs"
+                >C++</span
+              >
+              <span
+                class="bg-primary-purple/20 text-primary-purple px-2 py-1 rounded text-xs"
+                >Console App</span
+              >
+              <span
+                class="bg-primary-blue/20 text-primary-blue px-2 py-1 rounded text-xs"
+                >OOP</span
+              >
+            </div>
+            <a
+              href="#"
+              class="text-primary-blue hover:text-primary-purple transition-colors"
+            >
+              <i class="fab fa-github mr-2"></i>View on GitHub
+            </a>
+          </div>
+
+          <!-- Pizza Ordering -->
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="text-3xl mb-4 text-primary-purple">
+              <i class="fas fa-pizza-slice"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Pizza Ordering System</h3>
+            <p class="text-gray-300 mb-4">
+              WinForms application allowing users to customize and place pizza
+              orders with an intuitive interface.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="bg-primary-blue/20 text-primary-blue px-2 py-1 rounded text-xs"
+                >C#</span
+              >
+              <span
+                class="bg-primary-purple/20 text-primary-purple px-2 py-1 rounded text-xs"
+                >WinForms</span
+              >
+              <span
+                class="bg-primary-blue/20 text-primary-blue px-2 py-1 rounded text-xs"
+                >UI/UX</span
+              >
+            </div>
+            <a
+              href="#"
+              class="text-primary-blue hover:text-primary-purple transition-colors"
+            >
+              <i class="fab fa-github mr-2"></i>View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-16 gradient-text">
+          Certifications & Courses
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-3xl text-primary-blue mr-4">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">
+                  Foundational C# with Microsoft
+                </h3>
+                <p class="text-gray-400">FreeCodeCamp & Microsoft</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-3xl text-primary-purple mr-4">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">CS50</h3>
+                <p class="text-gray-400">Harvard University</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-3xl text-primary-blue mr-4">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">
+                  Secure Software: Design and Implementation
+                </h3>
+                <p class="text-gray-400">Alison</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-3xl text-primary-blue mr-4">
+                <i class="fas fa-code"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">
+                  Software Architecture and Clean Code Design in OOP
+                </h3>
+                <p class="text-gray-400">Udemy</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-3xl text-primary-blue mr-4">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">
+                  Building Event-Driven Architecture Microservices
+                </h3>
+                <p class="text-gray-400">Youtube</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-dark-card p-6 rounded-lg border border-dark-border card-hover"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-3xl text-primary-blue mr-4">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">
+                  Advanced Diploma in Cloud Computing for Amazon Web Services
+                </h3>
+                <p class="text-gray-400">Alison</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark-card/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-16 gradient-text">
+          Get In Touch
+        </h2>
+        <div class="max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-2xl font-semibold mb-6">Let's Work Together</h3>
+              <p class="text-gray-300 mb-8">
+                I'm always interested in new opportunities and exciting
+                projects. Whether you're looking for a dedicated developer or
+                want to discuss a potential collaboration, I'd love to hear from
+                you.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <div class="text-primary-blue">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <span>m7mareda74@gmail.com</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="text-primary-purple">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <span>+20 115 358 0937</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="text-primary-blue">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <span>Zagazig, Egypt</span>
+                </div>
+              </div>
+              <div class="flex gap-4 mt-8">
+                <a
+                  href="https://github.com/Algorithm-Archetict"
+                  class="text-2xl text-gray-400 hover:text-primary-blue transition-colors"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mohamed-reda74/"
+                  class="text-2xl text-gray-400 hover:text-primary-blue transition-colors"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+            <div class="bg-dark-card p-8 rounded-lg border border-dark-border">
+              <form
+                class="space-y-6"
+                action="https://formspree.io/f/xblynrdg"
+                method="POST"
+              >
+                <div>
+                  <label class="block text-sm font-medium mb-2">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-lg focus:border-primary-blue focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium mb-2">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-lg focus:border-primary-blue focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium mb-2">Message</label>
+                  <textarea
+                    name="message"
+                    rows="4"
+                    class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-lg focus:border-primary-blue focus:outline-none"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full gradient-bg py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-gray-400">
+          © 2025 Mohamed Reda. Built with passion and modern web technologies.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div
+      id="toast"
+      class="fixed bottom-6 right-6 z-50 hidden p-4 rounded-lg text-white font-medium shadow-lg transition-opacity duration-300"
+    ></div>
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const nav = document.querySelector("nav");
+
+      mobileMenuBtn.addEventListener("click", function () {
+        // Simple mobile menu toggle - you can enhance this
+        console.log("Mobile menu clicked");
+      });
+
+      // Typing animation
+      const texts = [
+        "Software Engineer",
+        "Full-Stack Developer",
+        ".NET Specialist",
+        "Web Solutions Expert",
+        "Freelance Developer",
+      ];
+
+      let textIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const typedTextElement = document.getElementById("typed-text");
+
+      function typeText() {
+        const currentText = texts[textIndex];
+
+        if (isDeleting) {
+          typedTextElement.textContent = currentText.substring(
+            0,
+            charIndex - 1
+          );
+          charIndex--;
+        } else {
+          typedTextElement.textContent = currentText.substring(
+            0,
+            charIndex + 1
+          );
+          charIndex++;
+        }
+
+        let typeSpeed = isDeleting ? 50 : 100;
+
+        if (!isDeleting && charIndex === currentText.length) {
+          typeSpeed = 2000; // Pause at end
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          textIndex = (textIndex + 1) % texts.length;
+          typeSpeed = 500; // Pause before next text
+        }
+
+        setTimeout(typeText, typeSpeed);
+      }
+
+      // Start typing animation
+      typeText();
+
+      // Add scroll-based animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections for animation
+      document.querySelectorAll("section").forEach((section) => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(20px)";
+        section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        observer.observe(section);
+      });
+
+      // Navbar background on scroll
+      window.addEventListener("scroll", () => {
+        const navbar = document.querySelector("nav");
+        if (window.scrollY > 100) {
+          navbar.classList.add("bg-dark-bg");
+          navbar.classList.remove("bg-dark-bg/90");
+        } else {
+          navbar.classList.add("bg-dark-bg/90");
+          navbar.classList.remove("bg-dark-bg");
+        }
+      });
+
+      // Project links (replace with actual GitHub URLs)
+      const projectLinks = {
+        "E-Commerce Platform":
+          "https://github.com/Algorithm-Archetict/ecommerce-project",
+        "Book Management System":
+          "https://github.com/Algorithm-Archetict/book-management",
+        "Examination System":
+          "https://github.com/Algorithm-Archetict/examination-system",
+        "Cafeteria Management":
+          "https://github.com/Algorithm-Archetict/cafeteria-management",
+        "Banking System":
+          "https://github.com/Algorithm-Archetict/banking-system",
+        "Pizza Ordering System":
+          "https://github.com/Algorithm-Archetict/pizza-ordering",
+      };
+
+      // Add click handlers for project GitHub links
+      document.querySelectorAll('a[href="#"]').forEach((link) => {
+        const projectTitle = link
+          .closest(".card-hover")
+          ?.querySelector("h3")?.textContent;
+        if (projectTitle && projectLinks[projectTitle]) {
+          link.href = projectLinks[projectTitle];
+          link.target = "_blank";
+        }
+      });
+
+      // Form submission
+      function showToast(message, type = "success") {
+        const toast = document.getElementById("toast");
+
+        // Set message
+        toast.textContent = message;
+
+        // Reset styles
+        toast.className =
+          "fixed bottom-6 right-6 z-50 p-4 rounded-lg text-white font-medium shadow-lg transition-opacity duration-300";
+
+        // Apply color based on type
+        if (type === "success") {
+          toast.classList.add("bg-green-600");
+        } else if (type === "error") {
+          toast.classList.add("bg-red-600");
+        }
+
+        // Show the toast
+        toast.classList.remove("hidden", "opacity-0");
+
+        // Hide after 3 seconds
+        setTimeout(() => {
+          toast.classList.add("opacity-0");
+          setTimeout(() => toast.classList.add("hidden"), 300); // Wait for transition
+        }, 3000);
+      }
+
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = this.querySelector('input[type="text"]');
+        const email = this.querySelector('input[type="email"]');
+        const message = this.querySelector("textarea");
+
+        let isValid = true;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Reset borders
+        [name, email, message].forEach((input) =>
+          input.classList.remove("border-red-500")
+        );
+
+        // Name validation: required and 3+ letters
+        if (!name.value.trim() || name.value.trim().length < 3) {
+          name.classList.add("border-red-500");
+          isValid = false;
+        }
+
+        // Email validation
+        if (!email.value.trim() || !emailRegex.test(email.value)) {
+          email.classList.add("border-red-500");
+          isValid = false;
+        }
+
+        // Message validation: required and 10+ letters
+        if (!message.value.trim() || message.value.trim().length < 10) {
+          message.classList.add("border-red-500");
+          isValid = false;
+        }
+
+        if (!isValid) {
+          showToast("Please fill in all fields correctly.", "error");
+          return;
+        }
+
+        // ✅ All validations passed
+        showToast(
+          "Thank you for your message! I'll get back to you soon.",
+          "success"
+        );
+        this.reset();
+      });
+
+      // Add particle effect to hero section
+      function createParticle() {
+        const particle = document.createElement("div");
+        particle.className =
+          "absolute w-1 h-1 bg-primary-blue rounded-full opacity-50";
+        particle.style.left = Math.random() * 100 + "%";
+        particle.style.top = Math.random() * 100 + "%";
+        particle.style.animation = "float 3s ease-in-out infinite";
+        particle.style.animationDelay = Math.random() * 3 + "s";
+
+        const heroSection = document.getElementById("home");
+        heroSection.style.position = "relative";
+        heroSection.appendChild(particle);
+
+        setTimeout(() => {
+          particle.remove();
+        }, 6000);
+      }
+
+      // Create particles periodically
+      setInterval(createParticle, 2000);
+
+      console.log("Portfolio website loaded successfully!");
+    </script>
+  </body>
+</html>
