@@ -129,13 +129,48 @@
         id="mobile-menu"
         class="md:hidden fixed top-16 left-0 w-full bg-dark-bg border-t border-dark-border z-40 flex flex-col items-center space-y-6 py-8 transition-all duration-300 hidden"
       >
-        <a href="#home" class="hover:text-primary-blue transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
-        <a href="#services" class="hover:text-primary-blue transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a>
-        <a href="#about" class="hover:text-primary-blue transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
-        <a href="#skills" class="hover:text-primary-blue transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Skills</a>
-        <a href="#projects" class="hover:text-primary-blue transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects</a>
-        <a href="#Certifications" class="hover:text-primary-blue transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Certifications</a>
-        <a href="#contact" class="hover:text-primary-blue transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+        <a
+          href="#home"
+          class="hover:text-primary-blue transition-colors"
+          onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+          >Home</a
+        >
+        <a
+          href="#services"
+          class="hover:text-primary-blue transition-colors"
+          onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+          >Services</a
+        >
+        <a
+          href="#about"
+          class="hover:text-primary-blue transition-colors"
+          onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+          >About</a
+        >
+        <a
+          href="#skills"
+          class="hover:text-primary-blue transition-colors"
+          onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+          >Skills</a
+        >
+        <a
+          href="#projects"
+          class="hover:text-primary-blue transition-colors"
+          onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+          >Projects</a
+        >
+        <a
+          href="#Certifications"
+          class="hover:text-primary-blue transition-colors"
+          onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+          >Certifications</a
+        >
+        <a
+          href="#contact"
+          class="hover:text-primary-blue transition-colors"
+          onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+          >Contact</a
+        >
       </div>
     </nav>
 
@@ -541,15 +576,16 @@
             <div class="flex flex-wrap gap-2">
               <span
                 class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
-                >C#</span
+                >C# .NET</span
               >
-              <span
-                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
-                >.NET Core</span
-              >
+
               <span
                 class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
                 >ASP.NET MVC</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Razor</span
               >
               <span
                 class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
@@ -557,7 +593,15 @@
               >
               <span
                 class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >SignalR</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
                 >EF Core</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Dapper</span
               >
               <span
                 class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
@@ -581,7 +625,19 @@
             <div class="flex flex-wrap gap-2">
               <span
                 class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >HTML</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >CSS</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
                 >JavaScript</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >TypeScript</span
               >
               <span
                 class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
@@ -589,15 +645,11 @@
               >
               <span
                 class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
-                >HTML5</span
-              >
-              <span
-                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
-                >CSS3</span
-              >
-              <span
-                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
                 >Bootstrap</span
+              >
+              <span
+                class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Tailwind</span
               >
               <span
                 class="skill-badge bg-gray-700 px-3 py-1 rounded-full text-sm"
@@ -674,6 +726,30 @@
                 <i class="fas fa-code"></i>
               </div>
               <span class="text-sm">Clean Code</span>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl mb-2 text-primary-blue">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <span class="text-sm">Security Best Practices</span>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl mb-2 text-primary-purple">
+                <i class="fas fa-expand-arrows-alt"></i>
+              </div>
+              <span class="text-sm">Scalability</span>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl mb-2 text-primary-blue">
+                <i class="fas fa-tools"></i>
+              </div>
+              <span class="text-sm">Maintainability</span>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl mb-2 text-primary-purple">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <span class="text-sm">High Code Quality</span>
             </div>
           </div>
         </div>
@@ -992,7 +1068,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -1097,7 +1172,8 @@
     <footer class="py-8 border-t border-dark-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p class="text-gray-400">
-          © 2025 Mohamed Reda. Built with passion and modern web technologies. ❤️
+          © 2025 Mohamed Reda. Built with passion and modern web technologies.
+          ❤️
         </p>
       </div>
     </footer>
@@ -1110,20 +1186,19 @@
     <script>
       // Smooth scrolling for navigation links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      // Mobile menu toggle
-      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const nav = document.querySelector("nav");
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const nav = document.querySelector("nav");
 
-      mobileMenuBtn.addEventListener("click", function () {
-        if (mobileMenu.classList.contains("hidden")) {
-          mobileMenu.classList.remove("hidden");
-        } else {
-          mobileMenu.classList.add("hidden");
-        }
-      });
+        mobileMenuBtn.addEventListener("click", function () {
+          if (mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.remove("hidden");
+          } else {
+            mobileMenu.classList.add("hidden");
+          }
         });
-      
+      });
 
       // Mobile menu toggle
       const mobileMenuBtn = document.getElementById("mobile-menu-btn");
